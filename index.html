@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayrem Ben Rayen — AIOps Specialist</title>
+<meta name="description" content="Bayrem Ben Rayen — AIOps Specialist & AI/ML Engineer. Building AI-powered monitoring, anomaly detection, and infrastructure automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanline" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="logo">bayrem<span class="accent">@</span>aiops<span class="muted">:~$</span></a>
+    <nav class="tabs" id="tabs">
+      <a href="#about">about</a>
+      <a href="#experience">experience</a>
+      <a href="#projects">projects</a>
+      <a href="#skills">stack</a>
+      <a href="#blog">blog</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <a class="btn btn-ghost resume-link" href="assets/Bayrem_Ben_Rayen_Resume.pdf" download>résumé ↓</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="prompt-line"><span class="prompt">bayrem@aiops</span><span class="muted">:~$</span> <span class="typed" id="typedCmd"></span><span class="cursor" id="typeCursor">▌</span></p>
+        <h1 class="hero-name" id="heroName" hidden>Bayrem Ben Rayen</h1>
+        <p class="hero-role" id="heroRole" hidden>AIOps Specialist <span class="dim">/</span> AI &amp; Machine Learning Engineer</p>
+
+        <div class="hero-about" id="heroAbout" hidden>
+          <p>Recent Software Engineering graduate specializing in AI-driven infrastructure and AIOps. I build systems that make infrastructure smarter — from anomaly detection and predictive forecasting to LLM-powered incident reporting.</p>
+          <p>My end-of-studies project, <strong>Net Detective</strong>, is an AI-powered server monitoring platform combining Isolation Forest anomaly detection, linear regression forecasting, and automated LLM-generated reports delivered via Telegram — built with Docker, FastAPI, PostgreSQL, Grafana, and n8n.</p>
+          <p>I'm comfortable across the stack: Python (Scikit-Learn, TensorFlow, Pandas), self-hosted Linux infrastructure, and workflow automation. Looking for AIOps / AI infrastructure roles where I can keep applying ML to real operational problems.</p>
+        </div>
+
+        <div class="hero-cta" id="heroCta" hidden>
+          <a href="#projects" class="btn btn-primary">view projects</a>
+          <a href="assets/Bayrem_Ben_Rayen_Resume.pdf" download class="btn btn-ghost">download résumé</a>
+        </div>
+      </div>
+
+      <!-- Signature element: live self-monitoring widget -->
+      <aside class="status-card" aria-label="Live status panel">
+        <div class="status-card-head">
+          <span class="dot dot-live"></span>
+          <span class="status-title">net-detective — self-monitor</span>
+        </div>
+        <div class="status-row">
+          <span class="k">status</span><span class="v v-ok">operational</span>
+        </div>
+        <div class="status-row">
+          <span class="k">page uptime</span><span class="v mono" id="uptime">00:00:00</span>
+        </div>
+        <div class="status-row">
+          <span class="k">anomalies detected</span><span class="v mono">0</span>
+        </div>
+        <div class="status-row">
+          <span class="k">last check</span><span class="v mono">n8n · 5m interval</span>
+        </div>
+        <div class="sparkline-wrap">
+          <canvas id="sparkline" width="280" height="64" aria-hidden="true"></canvas>
+        </div>
+        <div class="status-row status-row-sub">
+          <span class="k">forecast</span><span class="v mono v-muted">nominal load, next 24h</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / EDUCATION / CERTS ============ -->
+  <section class="section" id="about">
+    <p class="section-label">// credentials</p>
+    <div class="credentials-grid">
+      <div>
+        <h2 class="section-title">Education</h2>
+        <ul class="log-list">
+          <li class="log-item">
+            <p class="log-time">Sept 2023 – Jul 2026</p>
+            <p class="log-title">Bachelor's Degree (Licence) — Software Engineering &amp; Information Systems</p>
+            <p class="log-org">École Centrale Supérieure Privée d'Informatique et de Télécommunications · Honoris United Universities</p>
+          </li>
+          <li class="log-item">
+            <p class="log-time">Sept 2022 – Sept 2023</p>
+            <p class="log-title">Baccalauréat — Computer Science</p>
+            <p class="log-org">Lycée Mohamed Attia Khaznadar</p>
+          </li>
+        </ul>
+
+        <h2 class="section-title" style="margin-top:2.5rem">Languages</h2>
+        <div class="lang-grid">
+          <div class="lang-item"><span>Arabic</span><span class="muted">native</span></div>
+          <div class="lang-item"><span>English</span><span class="muted">C2</span></div>
+          <div class="lang-item"><span>French</span><span class="muted">B2</span></div>
+          <div class="lang-item"><span>German</span><span class="muted">B1</span></div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="section-title">Certifications</h2>
+        <ul class="cert-list">
+          <li><span class="cert-name">IBM Artificial Intelligence</span><span class="cert-meta">Huawei · Jan 2026</span></li>
+          <li><span class="cert-name">Python Essentials 2</span><span class="cert-meta">Cisco Networking Academy · Dec 2025</span></li>
+          <li><span class="cert-name"><a href="https://certs.hashgraphdev.com/01b52979-6a62-4985-bcdd-cd4ba0e182e5.pdf" target="_blank" rel="noopener">Hashgraph Developer ↗</a></span><span class="cert-meta">DarBlockchain · Jun 2025</span></li>
+          <li><span class="cert-name">Prompt Engineering — 21st Century Skills</span><span class="cert-meta">Honoris United Universities · May 2025</span></li>
+          <li><span class="cert-name">Entrepreneurship — 21st Century Skills</span><span class="cert-meta">Honoris United Universities · May 2025</span></li>
+          <li><span class="cert-name">Personal Development — 21st Century Skills</span><span class="cert-meta">Honoris United Universities · May 2025</span></li>
+          <li><span class="cert-name">Coding and Data Analytics</span><span class="cert-meta">Le Wagon · May 2023</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <p class="section-label">// experience_log</p>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="log-entry">
+      <div class="log-entry-head">
+        <span class="dot dot-live"></span>
+        <div>
+          <p class="log-entry-title">AIOps / AI Infrastructure Intern (End-of-Studies)</p>
+          <p class="log-entry-org">TriTUX <span class="dim">·</span> <span class="mono muted">Feb 2026 – Jun 2026</span></p>
+        </div>
+      </div>
+      <p class="log-entry-summary">Designed, built, and deployed <strong>Net Detective</strong>, an AI-powered server monitoring platform delivering real-time anomaly detection, predictive forecasting, and fully automated incident reporting — developed as my end-of-studies project (PFE) across three Scrum sprints in a 3-person team.</p>
+
+      <div class="log-block">
+        <p class="log-block-label">$ machine learning &amp; detection</p>
+        <ul class="terminal-list">
+          <li>Implemented Isolation Forest for unsupervised anomaly detection on server metrics, exposed as a production <code>/detect</code> FastAPI endpoint</li>
+          <li>Built a linear regression forecasting model exposed via a <code>/predict</code> endpoint, enabling early warning before thresholds are breached</li>
+        </ul>
+      </div>
+      <div class="log-block">
+        <p class="log-block-label">$ automation &amp; AI reporting</p>
+        <ul class="terminal-list">
+          <li>Integrated Ollama running LLaMA 3 to auto-generate daily plain-English incident reports summarizing system health and anomalies</li>
+          <li>Delivered reports automatically via Telegram using n8n, removing the need for manual log review</li>
+          <li>Designed two automated n8n pipelines: a 1-minute threshold-alerting workflow and a 5-minute anomaly/predictive-check workflow</li>
+        </ul>
+      </div>
+      <div class="log-block">
+        <p class="log-block-label">$ infrastructure &amp; engineering</p>
+        <ul class="terminal-list">
+          <li>Containerized the full stack with Docker (FastAPI, PostgreSQL, Grafana, n8n) for a reproducible, self-hosted deployment</li>
+          <li>Built Grafana dashboards for live visualization of server metrics and detected anomalies</li>
+          <li>Diagnosed and resolved production issues: recurring alert-spam (fixed with a 5-minute cooldown), a SQL operator-precedence bug affecting alert logic, and an n8n HTTP Request serialization issue requiring a custom Code node</li>
+          <li>Produced full system architecture and UML sequence diagrams (SVG/HTML and PlantUML) documenting data flow between services</li>
+          <li>Deliberately scoped the project to exclude API authentication, unit tests, Prometheus, and a frontend dashboard, prioritizing a lean, functional core within the internship timeline</li>
+        </ul>
+      </div>
+      <div class="tag-row">
+        <span class="tag">Docker</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Grafana</span><span class="tag">n8n</span><span class="tag">Ollama / LLaMA 3</span><span class="tag">Scikit-Learn</span>
+      </div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-entry-head">
+        <span class="dot dot-ok"></span>
+        <div>
+          <p class="log-entry-title">Data Mining &amp; Machine Learning Intern</p>
+          <p class="log-entry-org">Tunisie Telecom <span class="dim">·</span> <span class="mono muted">Jul 2025 – Sep 2025</span></p>
+        </div>
+      </div>
+      <p class="log-entry-summary">Designed and developed a complete customer prediction solution, delivered end-to-end as a <strong>Flask web application</strong> — from raw data to a deployed, web-integrated ML model.</p>
+
+      <div class="log-block">
+        <p class="log-block-label">$ data mining &amp; preparation</p>
+        <ul class="terminal-list">
+          <li>Performed data mining and cleaning on customer datasets using advanced Pandas manipulation (missing values, feature engineering, data transformation)</li>
+          <li>Built visualizations with Matplotlib to explore customer patterns and validate data quality before modeling</li>
+        </ul>
+      </div>
+      <div class="log-block">
+        <p class="log-block-label">$ modeling</p>
+        <ul class="terminal-list">
+          <li>Implemented K-Means clustering for unsupervised customer segmentation, grouping customers by behavior to support targeted analysis</li>
+          <li>Iterated on feature selection and preprocessing to optimize segmentation quality</li>
+        </ul>
+      </div>
+      <div class="log-block">
+        <p class="log-block-label">$ deployment</p>
+        <ul class="terminal-list">
+          <li>Serialized and deployed the optimized prediction model using Joblib for fast, reusable loading</li>
+          <li>Integrated the trained model into a Flask web application, making predictions accessible through a simple web interface</li>
+        </ul>
+      </div>
+      <div class="tag-row">
+        <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Scikit-Learn</span><span class="tag">Joblib</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <p class="section-label">// projects</p>
+    <h2 class="section-title">Flagship Project</h2>
+
+    <div class="project-card">
+      <div class="project-card-head">
+        <div>
+          <p class="project-name">net-detective</p>
+          <p class="project-tagline">AI-powered server monitoring platform</p>
+        </div>
+        <span class="badge badge-private">private repo</span>
+      </div>
+      <p class="project-desc">An end-to-end AIOps platform combining anomaly detection, predictive forecasting, and automated LLM-based reporting for server infrastructure. Built solo-designed, team-shipped: 3 Scrum sprints, 3 engineers, one lean production system.</p>
+
+      <div class="project-stats">
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">scrum sprints</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">ML models in prod</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">automated n8n pipelines</span></div>
+        <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">automated reporting</span></div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag">Docker</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Grafana</span><span class="tag">n8n</span><span class="tag">Ollama / LLaMA 3</span><span class="tag">Scikit-Learn</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <p class="section-label">// stack.manifest</p>
+    <h2 class="section-title">Skills &amp; Technologies</h2>
+
+    <div class="stack-grid">
+      <div class="stack-group">
+        <p class="stack-key">languages:</p>
+        <div class="tag-row"><span class="tag">Python — Expert</span><span class="tag">Java — Advanced</span><span class="tag">Angular — Intermediate</span></div>
+      </div>
+      <div class="stack-group">
+        <p class="stack-key">ai_ml:</p>
+        <div class="tag-row"><span class="tag">Scikit-Learn</span><span class="tag">TensorFlow</span><span class="tag">Isolation Forest</span><span class="tag">K-Means</span><span class="tag">Linear Regression</span><span class="tag">Ollama / LLaMA 3</span><span class="tag">Prompt Engineering</span></div>
+      </div>
+      <div class="stack-group">
+        <p class="stack-key">data_tools:</p>
+        <div class="tag-row"><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Joblib</span></div>
+      </div>
+      <div class="stack-group">
+        <p class="stack-key">infra_aiops:</p>
+        <div class="tag-row"><span class="tag">Docker</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Grafana</span><span class="tag">n8n</span><span class="tag">Linux</span><span class="tag">Flask</span></div>
+      </div>
+      <div class="stack-group">
+        <p class="stack-key">soft_skills:</p>
+        <div class="tag-row"><span class="tag">Critical Thinking</span><span class="tag">Problem Solving</span><span class="tag">Time Management</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section class="section" id="blog">
+    <p class="section-label">// blog</p>
+    <h2 class="section-title">Writing</h2>
+    <p class="section-intro">Notes from building AIOps systems, working with LLMs on infrastructure, and everything I break along the way. <span class="muted">— edit or add real posts in <code>/blog</code>.</span></p>
+
+    <div class="blog-grid">
+      <article class="blog-card">
+        <p class="blog-meta"><span class="mono muted">draft</span></p>
+        <h3 class="blog-title">What I learned building Net Detective</h3>
+        <p class="blog-excerpt">On combining Isolation Forest anomaly detection with LLM-generated reports — and the SQL bug that took down alerting for a day.</p>
+        <span class="blog-link muted">coming soon</span>
+      </article>
+      <article class="blog-card">
+        <p class="blog-meta"><span class="mono muted">draft</span></p>
+        <h3 class="blog-title">n8n for AIOps: workflows over glue code</h3>
+        <p class="blog-excerpt">Why I moved alerting and reporting logic into n8n instead of hand-rolled cron jobs — and where it started to hurt.</p>
+        <span class="blog-link muted">coming soon</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-contact" id="contact">
+    <p class="section-label">// contact</p>
+    <h2 class="section-title">Let's talk</h2>
+    <p class="section-intro">Open to AIOps, AI infrastructure, and ML engineering roles.</p>
+
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:bayrembenrayen@gmail.com">
+        <span class="k">email</span>
+        <span class="v">bayrembenrayen@gmail.com</span>
+      </a>
+      <a class="contact-item" href="tel:+21628744466">
+        <span class="k">phone</span>
+        <span class="v">+216 28 744 466</span>
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/bayrem-ben-rayen-43b81b291/" target="_blank" rel="noopener">
+        <span class="k">linkedin</span>
+        <span class="v">/in/bayrem-ben-rayen</span>
+      </a>
+      <a class="contact-item" href="https://github.com/BerberStein" target="_blank" rel="noopener">
+        <span class="k">github</span>
+        <span class="v">@BerberStein</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="mono muted">bayrem@aiops:~$ <span class="blink-cursor">_</span></p>
+  <p class="muted">© <span id="year"></span> Bayrem Ben Rayen. Built with Docker energy and too much coffee.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
