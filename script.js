@@ -1,3 +1,49 @@
+// ===== i18n =====
+(function i18n() {
+  const STORAGE_KEY = 'lang';
+  const buttons = document.querySelectorAll('.lang-switcher .switcher-btn');
+
+  function applyLang(lang) {
+    const dict = (window.TRANSLATIONS && window.TRANSLATIONS[lang]) || {};
+    const fallback = (window.TRANSLATIONS && window.TRANSLATIONS.en) || {};
+    document.documentElement.setAttribute('lang', lang);
+
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      let value = dict[key] !== undefined ? dict[key] : fallback[key];
+      if (value === undefined) return;
+      if (key === 'footer.credit') {
+        value = value.replace('{year}', new Date().getFullYear());
+      }
+      el.innerHTML = value;
+    });
+
+    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    localStorage.setItem(STORAGE_KEY, lang);
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+  });
+
+  const saved = localStorage.getItem(STORAGE_KEY) || 'en';
+  applyLang(saved);
+})();
+
+// ===== Theme toggle =====
+(function theme() {
+  const toggle = document.getElementById('themeToggle');
+  if (!toggle) return;
+
+  toggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    if (window.__redrawSparkline) window.__redrawSparkline();
+  });
+})();
+
 // ===== Terminal boot / typing effect =====
 (function typeIntro() {
   const el = document.getElementById('typedCmd');
@@ -49,14 +95,17 @@
   setInterval(tick, 1000);
 })();
 
-// ===== Sparkline: deterministic-ish "metrics" line, since this is a monitoring-flavored site =====
+// ===== Sparkline: deterministic-ish "metrics" line, theme-aware color =====
 (function sparkline() {
   const canvas = document.getElementById('sparkline');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   const w = canvas.width, h = canvas.height;
 
-  // seeded pseudo-random walk so it looks alive but not jarring
+  function accentColor() {
+    return getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#2EE6A6';
+  }
+
   let points = [];
   let value = h * 0.6;
   for (let i = 0; i < 40; i++) {
@@ -66,8 +115,9 @@
   }
 
   function draw() {
+    const color = accentColor();
     ctx.clearRect(0, 0, w, h);
-    ctx.strokeStyle = '#2EE6A6';
+    ctx.strokeStyle = color;
     ctx.lineWidth = 1.5;
     ctx.beginPath();
     points.forEach((p, i) => {
@@ -77,13 +127,12 @@
     });
     ctx.stroke();
 
-    // fill under line
     ctx.lineTo(w, h);
     ctx.lineTo(0, h);
     ctx.closePath();
     const grad = ctx.createLinearGradient(0, 0, 0, h);
-    grad.addColorStop(0, 'rgba(46,230,166,0.18)');
-    grad.addColorStop(1, 'rgba(46,230,166,0)');
+    grad.addColorStop(0, color + '2E'); // ~18% alpha hex suffix
+    grad.addColorStop(1, color + '00');
     ctx.fillStyle = grad;
     ctx.fill();
   }
@@ -97,6 +146,8 @@
   }
 
   draw();
+  window.__redrawSparkline = draw;
+
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduced) setInterval(step, 1400);
 })();
@@ -115,6 +166,3 @@
     btn.setAttribute('aria-expanded', 'false');
   }));
 })();
-
-// ===== Footer year =====
-document.getElementById('year').textContent = new Date().getFullYear();
