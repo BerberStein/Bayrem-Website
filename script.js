@@ -20,6 +20,13 @@
 
     buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
     localStorage.setItem(STORAGE_KEY, lang);
+
+    const resumeFile = lang === 'fr' ? 'assets/Bayrem_Ben_Rayen_CV_FR.pdf' : 'assets/Bayrem_Ben_Rayen_Resume.pdf';
+    const resumeName = lang === 'fr' ? 'Bayrem_Ben_Rayen_CV_FR.pdf' : 'Bayrem_Ben_Rayen_Resume.pdf';
+    document.querySelectorAll('.js-resume-link').forEach((a) => {
+      a.setAttribute('href', resumeFile);
+      a.setAttribute('download', resumeName);
+    });
   }
 
   buttons.forEach((btn) => {
