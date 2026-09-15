@@ -93,6 +93,9 @@ window.TRANSLATIONS = {
     "services.avgCost": "Average Cost",
     "services.premium": "premium",
     "services.note": "More service offers coming soon.",
+    "services.cta": "get in touch",
+    "services.metaTitle": "Services, Bayrem Ben Rayen",
+    "services.metaDescription": "Website development services offered by Bayrem Ben Rayen: showcase and premium business sites, pricing in TND.",
 
     "blog.label": "// blog",
     "blog.title": "Writing",
@@ -209,6 +212,9 @@ window.TRANSLATIONS = {
     "services.avgCost": "Coût moyen",
     "services.premium": "premium",
     "services.note": "D'autres offres de services arrivent bientôt.",
+    "services.cta": "me contacter",
+    "services.metaTitle": "Services, Bayrem Ben Rayen",
+    "services.metaDescription": "Services de développement web proposés par Bayrem Ben Rayen : sites vitrines et sites premium, tarifs en TND.",
 
     "blog.label": "// blog",
     "blog.title": "Écriture",

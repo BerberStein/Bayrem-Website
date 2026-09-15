@@ -54,6 +54,7 @@
 // ===== Terminal boot / typing effect =====
 (function typeIntro() {
   const el = document.getElementById('typedCmd');
+  if (!el) return; // page has no typed-command hero (e.g. services.html)
   const cursor = document.getElementById('typeCursor');
   const text = 'whoami';
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

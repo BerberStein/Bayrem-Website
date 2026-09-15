@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="services.metaTitle">Services, Bayrem Ben Rayen</title>
+<meta name="description" data-i18n="services.metaDescription" content="Website development services offered by Bayrem Ben Rayen: showcase and premium business sites, pricing in TND.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* Set theme before paint to avoid flash-of-wrong-theme */
+  (function () {
+    var t = localStorage.getItem('theme');
+    if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+
+<div class="scanline" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html#top" class="logo">bayrem<span class="accent">@</span>aiops<span class="muted">:~$</span></a>
+    <nav class="tabs" id="tabs">
+      <a href="index.html#about" data-i18n="nav.about">about</a>
+      <a href="index.html#experience" data-i18n="nav.experience">experience</a>
+      <a href="index.html#projects" data-i18n="nav.projects">projects</a>
+      <a href="index.html#skills" data-i18n="nav.skills">stack</a>
+      <a href="services.html" class="active" data-i18n="nav.services">services</a>
+      <a href="index.html#blog" data-i18n="nav.blog">blog</a>
+      <a href="index.html#contact" data-i18n="nav.contact">contact</a>
+    </nav>
+
+    <div class="nav-controls">
+      <a class="btn btn-ghost resume-link js-resume-link" href="assets/Bayrem_Ben_Rayen_Resume.pdf" download="Bayrem_Ben_Rayen_Resume.pdf"><span data-i18n="nav.resume">resume</span> ↓</a>
+
+      <div class="switcher lang-switcher" role="group" aria-label="Language">
+        <button type="button" class="switcher-btn" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="switcher-btn" data-lang="fr" aria-pressed="false">FR</button>
+      </div>
+
+      <button type="button" class="switcher theme-switcher" id="themeToggle" aria-label="Toggle light/dark theme">
+        <span class="theme-icon theme-icon-dark" aria-hidden="true">&#9789;</span>
+        <span class="theme-icon theme-icon-light" aria-hidden="true">&#9788;</span>
+      </button>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ SERVICES HERO ============ -->
+  <section class="hero services-hero">
+    <p class="prompt-line"><span class="prompt">bayrem@aiops</span><span class="muted">:~$</span> <span class="mono">cat services.md</span></p>
+    <h1 class="services-title" data-i18n="services.title">Website Development Services (One-time Cost)</h1>
+    <p class="services-lede" data-i18n="services.intro">Most businesses in Tunis look for either a quick online business card or an active online storefront.</p>
+  </section>
+
+  <!-- ============ SERVICES LIST ============ -->
+  <section class="section services-section">
+    <p class="section-label" data-i18n="services.label">// services</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <p class="service-name" data-i18n="services.offer1Name">Simple Showcase Website (Site Vitrine)</p>
+        <p class="service-desc" data-i18n="services.offer1Desc">A standard 3 to 5-page site built using templates or basic content systems (like WordPress) to list hours, services, and contacts.</p>
+        <div class="service-price">
+          <span class="service-price-label" data-i18n="services.avgCost">Average Cost</span>
+          <span class="service-price-value" data-i18n="services.offer1Price">1,200 to 1,800 TND</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <span class="badge badge-featured" data-i18n="services.premium">premium</span>
+        <p class="service-name" data-i18n="services.offer2Name">Premium / Business Showcase Site</p>
+        <p class="service-desc" data-i18n="services.offer2Desc">Custom layout design, multi-language support (often French, English, and Arabic), search visibility configuration, and CRM form connections.</p>
+        <div class="service-price">
+          <span class="service-price-label" data-i18n="services.avgCost">Average Cost</span>
+          <span class="service-price-value" data-i18n="services.offer2Price">2,000 to 4,500 TND</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="services-note" data-i18n="services.note">More service offers coming soon.</p>
+
+    <div class="services-cta">
+      <a href="index.html#contact" class="btn btn-primary" data-i18n="services.cta">get in touch</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="mono muted">bayrem@aiops:~$ <span class="blink-cursor">_</span></p>
+  <p class="muted" id="footerCredit" data-i18n="footer.credit">© {year} Bayrem Ben Rayen. Built with Docker energy and too much coffee.</p>
+</footer>
+
+<script src="translations.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

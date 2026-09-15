@@ -132,6 +132,7 @@ code {
   position: relative;
 }
 .tabs a:hover, .tabs a:focus-visible { color: var(--accent); }
+.tabs a.active { color: var(--accent); }
 
 .nav-controls {
   display: flex;
@@ -529,6 +530,30 @@ code {
   font-size: 0.8rem;
   color: var(--dim);
   margin: 1.6rem 0 0;
+}
+
+/* Standalone services.html page */
+.services-hero {
+  padding-bottom: 1rem;
+}
+.services-title {
+  font-family: var(--font-mono);
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 1.4rem 0 0.9rem;
+  line-height: 1.15;
+  max-width: 22ch;
+}
+.services-lede {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 60ch;
+  margin: 0;
+}
+.services-section { border-top: none; padding-top: 0; }
+.services-cta {
+  margin-top: 2rem;
 }
 
 /* Skills / stack manifest */
