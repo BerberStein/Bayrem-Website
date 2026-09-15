@@ -318,6 +318,24 @@ code {
 .v-ok { color: var(--accent); }
 .v-muted { color: var(--muted); }
 .status-row-sub { border-top: 1px solid var(--border-soft); margin-top: 0.5rem; padding-top: 0.7rem; }
+.status-cta {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border-soft);
+}
+.status-cta-line {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--muted);
+  margin: 0 0 0.7rem;
+  line-height: 1.4;
+}
+.status-cta-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
 .sparkline-wrap {
   margin: 0.7rem 0 0.3rem;
   background: var(--surface-2);

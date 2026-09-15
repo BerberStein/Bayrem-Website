@@ -26,6 +26,8 @@ window.TRANSLATIONS = {
     "status.lastCheck": "last check",
     "status.forecast": "forecast",
     "status.forecastValue": "nominal load, next 24h",
+    "status.ctaLine": "Want a system like this monitoring your business?",
+    "status.ctaBtn": "explore services ↗",
 
     "credentials.label": "// credentials",
     "credentials.education": "Education",
@@ -145,6 +147,8 @@ window.TRANSLATIONS = {
     "status.lastCheck": "dernière vérification",
     "status.forecast": "prévision",
     "status.forecastValue": "charge normale, prochaines 24h",
+    "status.ctaLine": "Envie d'un système comme celui-ci pour votre entreprise ?",
+    "status.ctaBtn": "voir les services ↗",
 
     "credentials.label": "// diplômes",
     "credentials.education": "Formation",
