@@ -78,35 +78,38 @@
         </div>
       </div>
 
-      <!-- Signature element: live self-monitoring widget -->
-      <aside class="status-card" aria-label="Live status panel">
-        <div class="status-card-head">
-          <span class="dot dot-live"></span>
-          <span class="status-title" data-i18n="status.title">net-detective, self-monitor</span>
+      <!-- Signature element: live self-monitoring widget, plus a separate services CTA card -->
+      <div class="status-column">
+        <aside class="status-card" aria-label="Live status panel">
+          <div class="status-card-head">
+            <span class="dot dot-live"></span>
+            <span class="status-title" data-i18n="status.title">net-detective, self-monitor</span>
+          </div>
+          <div class="status-row">
+            <span class="k" data-i18n="status.status">status</span><span class="v v-ok" data-i18n="status.operational">operational</span>
+          </div>
+          <div class="status-row">
+            <span class="k" data-i18n="status.uptime">page uptime</span><span class="v mono" id="uptime">00:00:00</span>
+          </div>
+          <div class="status-row">
+            <span class="k" data-i18n="status.anomalies">anomalies detected</span><span class="v mono">0</span>
+          </div>
+          <div class="status-row">
+            <span class="k" data-i18n="status.lastCheck">last check</span><span class="v mono">n8n · 5m interval</span>
+          </div>
+          <div class="sparkline-wrap">
+            <canvas id="sparkline" width="280" height="64" aria-hidden="true"></canvas>
+          </div>
+          <div class="status-row status-row-sub">
+            <span class="k" data-i18n="status.forecast">forecast</span><span class="v mono v-muted" data-i18n="status.forecastValue">nominal load, next 24h</span>
+          </div>
+        </aside>
+
+        <div class="services-cta-card">
+          <p class="services-cta-line" data-i18n="status.ctaLine">Want a system like this monitoring your business?</p>
+          <a href="services.html" class="btn btn-primary services-cta-btn" data-i18n="status.ctaBtn">explore services ↗</a>
         </div>
-        <div class="status-row">
-          <span class="k" data-i18n="status.status">status</span><span class="v v-ok" data-i18n="status.operational">operational</span>
-        </div>
-        <div class="status-row">
-          <span class="k" data-i18n="status.uptime">page uptime</span><span class="v mono" id="uptime">00:00:00</span>
-        </div>
-        <div class="status-row">
-          <span class="k" data-i18n="status.anomalies">anomalies detected</span><span class="v mono">0</span>
-        </div>
-        <div class="status-row">
-          <span class="k" data-i18n="status.lastCheck">last check</span><span class="v mono">n8n · 5m interval</span>
-        </div>
-        <div class="sparkline-wrap">
-          <canvas id="sparkline" width="280" height="64" aria-hidden="true"></canvas>
-        </div>
-        <div class="status-row status-row-sub">
-          <span class="k" data-i18n="status.forecast">forecast</span><span class="v mono v-muted" data-i18n="status.forecastValue">nominal load, next 24h</span>
-        </div>
-        <div class="status-cta">
-          <p class="status-cta-line" data-i18n="status.ctaLine">Want a system like this monitoring your business?</p>
-          <a href="services.html" class="btn btn-primary status-cta-btn" data-i18n="status.ctaBtn">explore services ↗</a>
-        </div>
-      </aside>
+      </div>
     </div>
   </section>
 
